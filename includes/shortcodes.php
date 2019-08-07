@@ -133,8 +133,8 @@ if ( ! class_exists( 'BOTUtilities' ) ) {
         }
     }
 
-    add_shortcode( 'people-list', 'BOTUtilities::people_list_shortcode' );
-    add_shortcode( 'charter-list', 'BOTUtilities::people_group_charter_list_shortcode' );
+    add_shortcode( 'people-list', array( 'BOTUtilities', 'people_list_shortcode' ) );
+    add_shortcode( 'charter-list', array( 'BOTUtilities', 'people_group_charter_list_shortcode' ) );
 
 }
 ?>
