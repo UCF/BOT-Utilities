@@ -11,3 +11,8 @@ GitHub Plugin URI: UCF/BOT-Utilities
 if ( ! defined( 'WPINC' ) ) {
     die;
 }
+
+include_once 'includes/people-functions.php';
+include_once 'includes/shortcodes.php';
+
+?>
