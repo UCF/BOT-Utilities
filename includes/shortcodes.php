@@ -1,6 +1,6 @@
 <?php
 
-function get_person_markup( $person, $title=null ) {
+function botutils_get_person_markup( $person, $title=null ) {
 	$image = get_the_post_thumbnail_url( $person );
 	if( ! $image ) {
 		$image = BOT_UTILITIES_IMG_URL . '/no-photo.png';
@@ -26,7 +26,7 @@ function get_person_markup( $person, $title=null ) {
  * Returns a person list
  **/
 
-function ucf_people_list_shortcode( $atts, $content='' ) {
+function botutils_people_list_shortcode( $atts, $content='' ) {
 	$atts = shortcode_atts(
 		array(
 			'people_group' => null,
@@ -82,7 +82,7 @@ function ucf_people_list_shortcode( $atts, $content='' ) {
 ?>
 		<?php if ( $i % 3 === 0 ) : ?><div class="row"><?php endif; ?>
 		<div class="col-md-4 col-sm-6">
-			<?php echo get_person_markup( $chair, 'Board Chair' ); ?>
+			<?php echo botutils_get_person_markup( $chair, 'Board Chair' ); ?>
 		</div>
 		<?php if ( $i % 3 === 2 ) : ?></div><?php endif; $i++; $count++; ?>
 <?php
@@ -91,7 +91,7 @@ function ucf_people_list_shortcode( $atts, $content='' ) {
 ?>
 		<?php if ( $i % 3 === 0 ) : ?><div class="row"><?php endif; ?>
 		<div class="col-md-4 col-sm-6">
-			<?php echo get_person_markup( $vice_chair, 'Board Vice Chair' ); ?>
+			<?php echo botutils_get_person_markup( $vice_chair, 'Board Vice Chair' ); ?>
 		</div>
 		<?php if ( $i % 3 === 2 ) : ?></div><?php endif; $i++; $count++; ?>
 <?php
@@ -101,7 +101,7 @@ function ucf_people_list_shortcode( $atts, $content='' ) {
 ?>
 	<?php if ( $i % 3 === 0 ) : ?><div class="row"><?php endif; ?>
 	<div class="col-md-4 col-sm-6">
-		<?php echo get_person_markup( $person ); ?>
+		<?php echo botutils_get_person_markup( $person ); ?>
 	</div>
 	<?php if ( $i % 3 === 2  || $i === $count ) : ?></div><?php endif; $i++; ?>
 <?php
@@ -109,9 +109,9 @@ function ucf_people_list_shortcode( $atts, $content='' ) {
 	return ob_get_clean();
 }
 
-add_shortcode( 'people-list', 'ucf_people_list_shortcode' );
+add_shortcode( 'people-list', 'botutils_people_list_shortcode' );
 
-function ucf_people_group_charter_list_shortcode( $atts, $content="" ) {
+function botutils_people_group_charter_list_shortcode( $atts, $content="" ) {
 	$none_term = term_exists( 'None', 'people_group' );
 	$terms = get_terms( array(
 		'taxonomy' => 'people_group',
@@ -130,6 +130,6 @@ function ucf_people_group_charter_list_shortcode( $atts, $content="" ) {
 	return ob_get_clean();
 }
 
-add_shortcode( 'charter-list', 'ucf_people_group_charter_list_shortcode' );
+add_shortcode( 'charter-list', 'botutils_people_group_charter_list_shortcode' );
 
 ?>
