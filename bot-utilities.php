@@ -12,7 +12,7 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-define( 'BOT_UTILITIES_URL', get_stylesheet_directory_uri() );
+define( 'BOT_UTILITIES_URL', plugin_dir_url( __FILE__ ) );
 define( 'BOT_UTILITIES_STATIC_URL', BOT_UTILITIES_URL . '/static' );
 define( 'BOT_UTILITIES_IMG_URL', BOT_UTILITIES_STATIC_URL . '/img' );
 
