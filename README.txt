@@ -2,7 +2,7 @@
 Contributors: ucfwebcom
 Requires at least: 4.9.7
 Tested up to: 4.9.7
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -21,6 +21,10 @@ Head over to the [BOT Utilities wiki](https://github.com/UCF/BOT-Utilities/wiki)
 
 
 == Changelog ==
+
+= 1.0.1 =
+Documentation:
+* Updated contributing doc to reflect migration from slack to teams.
 
 = 1.0.0 =
 * Initial release
