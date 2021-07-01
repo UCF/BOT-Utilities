@@ -15,6 +15,10 @@ Head over to the [BOT Utilities wiki](https://github.com/UCF/BOT-Utilities/wiki)
 
 ## Changelog ##
 
+### 1.0.2 ###
+Bugfix:
+* Fixed issue where the people-list shortcode was not displaying properly if list was not even.
+
 ### 1.0.1 ###
 Documentation:
 * Updated contributing doc to reflect migration from slack to teams.

@@ -81,35 +81,32 @@ if ( ! class_exists( 'BOTUtilities' ) ) {
                 }
             }
             $people = get_posts( $args );
-            $count = count( $people ) - 1;
+            echo '<div class="row">';
             if ( isset( $chair ) ) :
         ?>
-                <?php if ( $i % 3 === 0 ) : ?><div class="row"><?php endif; ?>
+
                 <div class="col-md-4 col-sm-6">
                     <?php echo BOTUtilities::get_person_markup( $chair, 'Board Chair' ); ?>
                 </div>
-                <?php if ( $i % 3 === 2 ) : ?></div><?php endif; $i++; $count++; ?>
+
         <?php
             endif;
             if ( isset( $vice_chair ) ) :
         ?>
-                <?php if ( $i % 3 === 0 ) : ?><div class="row"><?php endif; ?>
                 <div class="col-md-4 col-sm-6">
                     <?php echo BOTUtilities::get_person_markup( $vice_chair, 'Board Vice Chair' ); ?>
                 </div>
-                <?php if ( $i % 3 === 2 ) : ?></div><?php endif; $i++; $count++; ?>
         <?php
             endif;
             foreach( $people as $person ) :
                 $person = UCF_People_PostType::append_metadata( $person );
         ?>
-            <?php if ( $i % 3 === 0 ) : ?><div class="row"><?php endif; ?>
             <div class="col-md-4 col-sm-6">
                 <?php echo BOTUtilities::get_person_markup( $person ); ?>
             </div>
-            <?php if ( $i % 3 === 2  || $i === $count ) : ?></div><?php endif; $i++; ?>
         <?php
             endforeach;
+            echo '</div>';
             return ob_get_clean();
         }
 
