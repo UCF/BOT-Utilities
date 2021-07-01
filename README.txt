@@ -2,7 +2,7 @@
 Contributors: ucfwebcom
 Requires at least: 4.9.7
 Tested up to: 4.9.7
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -21,6 +21,10 @@ Head over to the [BOT Utilities wiki](https://github.com/UCF/BOT-Utilities/wiki)
 
 
 == Changelog ==
+
+= 1.0.2 =
+Bugfix:
+* Fixed issue where the people-list shortcode was not displaying properly if list was not even.
 
 = 1.0.1 =
 Documentation:
