@@ -62,27 +62,25 @@ if ( ! class_exists( 'BOTUtilities' ) ) {
                 // Create iterator for layout here.
             $i = 0;
             ob_start();
-            if ( $atts['positions'] ) {
-                $chair_id = ucf_bot_get_theme_mod_or_default( 'board_chair' );
-                $vice_chair_id = ucf_bot_get_theme_mod_or_default( 'board_vice_chair' );
-                $exclude = array();
-                if ( !empty( $chair_id ) ) {
-                    $chair = get_post( $chair_id );
-                    $chair = UCF_People_PostType::append_metadata( $chair );
-                    $exclude[] = $chair->ID;
-                }
-                if ( !empty( $vice_chair_id ) ) {
-                    $vice_chair = get_post( $vice_chair_id );
-                    $vice_chair = UCF_People_PostType::append_metadata( $vice_chair );
-                    $exclude[] = $vice_chair->ID;
-                }
-                if ( count( $exclude ) > 0 ) {
-                    $args['post__not_in'] = $exclude;
-                }
+            $chair_id = ucf_bot_get_theme_mod_or_default( 'board_chair' );
+            $vice_chair_id = ucf_bot_get_theme_mod_or_default( 'board_vice_chair' );
+            $exclude = array();
+            if ( !empty( $chair_id ) ) {
+                $chair = get_post( $chair_id );
+                $chair = UCF_People_PostType::append_metadata( $chair );
+                $exclude[] = $chair->ID;
+            }
+            if ( !empty( $vice_chair_id ) ) {
+                $vice_chair = get_post( $vice_chair_id );
+                $vice_chair = UCF_People_PostType::append_metadata( $vice_chair );
+                $exclude[] = $vice_chair->ID;
+            }
+            if ( count( $exclude ) > 0 ) {
+                $args['post__not_in'] = $exclude;
             }
             $people = get_posts( $args );
             echo '<div class="row">';
-            if ( isset( $chair ) ) :
+            if ( isset( $chair ) && $atts['positions'] ) :
         ?>
 
                 <div class="col-md-4 col-sm-6">
@@ -91,7 +89,7 @@ if ( ! class_exists( 'BOTUtilities' ) ) {
 
         <?php
             endif;
-            if ( isset( $vice_chair ) ) :
+            if ( isset( $vice_chair ) && $atts['positions'] ) :
         ?>
                 <div class="col-md-4 col-sm-6">
                     <?php echo BOTUtilities::get_person_markup( $vice_chair, 'Board Vice Chair' ); ?>
