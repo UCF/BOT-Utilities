@@ -15,6 +15,10 @@ Head over to the [BOT Utilities wiki](https://github.com/UCF/BOT-Utilities/wiki)
 
 ## Changelog ##
 
+### 1.0.3 ###
+Bugfix:
+* Fixed issue where the people-list shortcode was not displaying leadership in their committee assignments.
+
 ### 1.0.2 ###
 Bugfix:
 * Fixed issue where the people-list shortcode was not displaying properly if list was not even.
