@@ -1,7 +1,7 @@
 === BOT Utilities ===
 Contributors: ucfwebcom
 Requires at least: 4.9.7
-Tested up to: 4.9.7
+Tested up to: 5.3
 Stable tag: 1.0.2
 Requires PHP: 5.4
 License: GPLv3 or later
@@ -50,7 +50,7 @@ Note that compiled, minified css and js files are included within the repo.  Cha
 [Enabling debug mode](https://codex.wordpress.org/Debugging_in_WordPress) in your `wp-config.php` file is recommended during development to help catch warnings and bugs.
 
 = Requirements =
-* node
+* node v16+
 * gulp-cli
 
 = Instructions =

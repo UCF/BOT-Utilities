@@ -4,11 +4,11 @@ const gulp         = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS     = require('gulp-clean-css');
 const include      = require('gulp-include');
-const eslint       = require('gulp-eslint');
+const eslint       = require('gulp-eslint-new');
 const isFixed      = require('gulp-eslint-if-fixed');
 const babel        = require('gulp-babel');
 const rename       = require('gulp-rename');
-const sass         = require('gulp-sass');
+const sass         = require('gulp-sass')(require('sass'));
 const sassLint     = require('gulp-sass-lint');
 const uglify       = require('gulp-uglify');
 const readme       = require('gulp-readme-to-markdown');
@@ -125,7 +125,7 @@ function serverServe(done) {
 
 // Lint all plugin scss files
 gulp.task('scss-lint-plugin', () => {
-  return lintSCSS(`${config.src.scssPath}/*.scss`);
+  return lintSCSS(`${config.src.scssPath}/**/*.scss`);
 });
 
 // Compile plugin stylesheet
@@ -143,7 +143,7 @@ gulp.task('css', gulp.series('scss-lint-plugin', 'scss-build-plugin'));
 
 // Run eslint on js files in src.jsPath
 gulp.task('es-lint-plugin', () => {
-  return lintJS([`${config.src.jsPath}/*.js`], config.src.jsPath);
+  return lintJS([`${config.src.jsPath}/**/*.js`], config.src.jsPath);
 });
 
 // Concat and uglify js files through babel
