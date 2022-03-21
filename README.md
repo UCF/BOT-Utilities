@@ -15,6 +15,11 @@ Head over to the [BOT Utilities wiki](https://github.com/UCF/BOT-Utilities/wiki)
 
 ## Changelog ##
 
+### 1.0.4 ###
+Enhancements:
+* Updated people-list shortcode output for Athena v1.1.1+ compatibility
+* Upgraded packages
+
 ### 1.0.3 ###
 Bugfix:
 * Fixed issue where the people-list shortcode was not displaying leadership in their committee assignments.
