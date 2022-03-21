@@ -15,6 +15,10 @@ Head over to the [BOT Utilities wiki](https://github.com/UCF/BOT-Utilities/wiki)
 
 ## Changelog ##
 
+### 1.0.3 ###
+Bugfix:
+* Fixed issue where the people-list shortcode was not displaying leadership in their committee assignments.
+
 ### 1.0.2 ###
 Bugfix:
 * Fixed issue where the people-list shortcode was not displaying properly if list was not even.
@@ -39,7 +43,7 @@ Note that compiled, minified css and js files are included within the repo.  Cha
 [Enabling debug mode](https://codex.wordpress.org/Debugging_in_WordPress) in your `wp-config.php` file is recommended during development to help catch warnings and bugs.
 
 ### Requirements ###
-* node
+* node v16+
 * gulp-cli
 
 ### Instructions ###
