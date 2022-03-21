@@ -12,10 +12,10 @@ if ( ! class_exists( 'BOTUtilities' ) ) {
             ob_start();
         ?>
             <figure class="figure person-figure">
-                <a href="<?php echo get_permalink( $person->ID ); ?>">
+                <a href="<?php echo get_permalink( $person->ID ); ?>" class="text-decoration-none hover-parent">
                     <img class="img-fluid" src="<?php echo $image; ?>" alt="<?php echo $person->post_title; ?>">
                     <figcaption class="figure-caption text-secondary text-center mt-2 mb-4">
-                        <strong><?php echo $person->post_title; ?></strong>
+                        <strong class="hover-child-text-underline"><?php echo $person->post_title; ?></strong>
                         <?php if ( $title ) : ?>
                         <p class="text-muted"><?php echo $title; ?></p>
                         <?php endif; ?>
