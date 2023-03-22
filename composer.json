@@ -1,0 +1,8 @@
+{
+    "name": "ucf/bot-utilities",
+    "description": "Provides extra functionality and utilities for the BOT website.",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

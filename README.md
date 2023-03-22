@@ -15,6 +15,10 @@ Head over to the [BOT Utilities wiki](https://github.com/UCF/BOT-Utilities/wiki)
 
 ## Changelog ##
 
+### 1.0.5 ###
+Enhancements:
+* Added composer file.
+
 ### 1.0.4 ###
 Enhancements:
 * Updated people-list shortcode output for Athena v1.1.1+ compatibility

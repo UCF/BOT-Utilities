@@ -2,7 +2,7 @@
 /*
 Plugin Name: BOT Utilities
 Description: Provides extra functionality and utilities for the BOT website.
-Version: 1.0.4
+Version: 1.0.5
 Author: UCF Web Communications
 License: GPL3
 GitHub Plugin URI: UCF/BOT-Utilities
